@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -136,6 +137,89 @@ body, html {
   font-family: "Ruda", sans-serif;
   font-weight: 400;
   margin-left: 10px;
+}
+
+/* Serviços */
+.webview .servicos {
+  width: 100%;
+  background-color: #19AE81;
+  color: #FFFFFF;
+}
+.webview .servicos .container {
+  padding: 10px;
+}
+.webview .servicos .container .s-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30ps;
+}
+.webview .servicos .container .s-title h2 {
+  font-family: "Ruda", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.webview .servicos .container .s-carrossel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item {
+  min-height: 260px;
+  background-color: #FFFFFF;
+  color: #19AE81;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item .title {
+  width: 100%;
+  padding: 10px;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item .title p {
+  font-family: "Ruda", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 180px;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item .body .icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item .body .icon .span i {
+  font-size: 38px;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item .body .texto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 10px;
+}
+.webview .servicos .container .s-carrossel .s-carrossel-container .s-carrossel-item .body .texto p {
+  font-family: "Ruda", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

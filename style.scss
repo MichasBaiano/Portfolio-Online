@@ -161,3 +161,98 @@ body, html{
         }
     }
 }
+
+/* Serviços */
+.webview{
+    .servicos{
+        width: 100%;
+        background-color: config.$color-green;
+        color: config.$color-white;
+
+        .container{
+            padding: 10px;
+
+            .s-title{
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 30ps;
+            
+                h2{
+                    @include config.font-paragraf;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    color: config.$color-white;
+                }
+            }
+
+            .s-carrossel{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 30px;
+
+                .s-carrossel-container{
+                    display: flex;
+                    flex-direction: row;
+                    min-width: 100%;
+
+                    .s-carrossel-item{
+                        min-height: 260px;
+                        background-color: config.$color-white;
+                        color: config.$color-green;
+
+                        .title{
+                            width: 100%;
+                            padding: 10px;
+
+                            p{
+                                @include config.font-paragraf;
+                                font-size: 1.6rem;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .body{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            min-height: 180px;
+
+                            .icon{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                 width: 100%;
+                                 margin-bottom: 10px;
+
+                                .span i{
+                                    font-size: 38px;
+                                }
+                            }
+
+                            .texto{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                min-height: 10px;
+
+                                p{
+                                    @include config.font-paragraf;
+                                    text-align: center;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
