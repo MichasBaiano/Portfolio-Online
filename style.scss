@@ -474,3 +474,167 @@ body, html{
         }
     }
 }
+
+
+/* Responsividade */
+
+/* 425px */
+@media only screen and (min-width: config.$media-mobile-l) {
+    .webview {
+    
+        .intro{
+            
+            .container{
+
+                h1{
+                    font-size: 2.4rem;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .webview {
+        .sobre{
+
+            .container{
+
+                .row{
+                    display: grid;
+                    grid-template-columns: repeat(2, 50%);
+
+                    .c-photo{
+                        padding: 10px;
+                    }
+
+                    .c-descricao{
+                        padding: 10px;
+
+                        p{
+                            font-size: 1.2rem;
+                        }
+                        
+                        .habilidades{
+
+                            .h-item{
+
+                                .h-title{
+
+                                    h3{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+
+                                .h-c-porcentagem{
+
+                                    .h-porcentagem-geral{
+
+                                        span{
+                                            font-size: 1.2rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .webview{
+        .servicos{
+
+            .container{
+
+                .s-carousel{
+                    margin-bottom: 40px;
+                    height: 400px;
+                }
+            }
+        }
+    }
+
+    .webview{   
+
+        .portfolios{
+
+                .container{
+
+                    .p-title{
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+
+                    .p-projetos{
+
+                        .projeto{
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: repeat(2, 1fr);
+                            column-gap: 10px;
+                            row-gap: 10px;
+
+                            .photos{
+                                height: 100%;
+
+                                img{
+                                    position: relative;
+
+                                    &:hover{
+
+                                        .descricao{
+                                            position: absolute;
+                                            display: flex;
+                                            width: 100%;
+                                            height: 50px;
+                                            background-color: config.$color-green;
+                                            bottom: 0;
+                                            left: 0;
+                                            z-index: 9999;
+
+                                            p{
+                                                display: block;
+                                                color: config.$color-white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+    .webview{
+
+        .contato{
+
+            .container{
+
+                .title{
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+
+                .formulario{
+                    
+                    form{
+
+                        .form-group{
+                            display: flex;
+                            flex-direction: row;
+
+                            .controls{
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

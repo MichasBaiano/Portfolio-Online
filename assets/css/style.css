@@ -407,4 +407,79 @@ body, html {
   color: #FFFFFF;
 }
 
+/* Responsividade */
+/* 425px */
+@media only screen and (min-width: 425px) {
+  .webview .intro .container h1 {
+    font-size: 2.4rem;
+  }
+  .webview .intro .container p {
+    font-size: 1.2rem;
+  }
+  .webview .sobre .container .row {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .webview .sobre .container .row .c-photo {
+    padding: 10px;
+  }
+  .webview .sobre .container .row .c-descricao {
+    padding: 10px;
+  }
+  .webview .sobre .container .row .c-descricao p {
+    font-size: 1.2rem;
+  }
+  .webview .sobre .container .row .c-descricao .habilidades .h-item .h-title h3 {
+    font-size: 1.2rem;
+  }
+  .webview .sobre .container .row .c-descricao .habilidades .h-item .h-c-porcentagem .h-porcentagem-geral span {
+    font-size: 1.2rem;
+  }
+  .webview .servicos .container .s-carousel {
+    margin-bottom: 40px;
+    height: 400px;
+  }
+  .webview .portfolios .container .p-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .webview .portfolios .container .p-projetos .projeto {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+  .webview .portfolios .container .p-projetos .projeto .photos {
+    height: 100%;
+  }
+  .webview .portfolios .container .p-projetos .projeto .photos img {
+    position: relative;
+  }
+  .webview .portfolios .container .p-projetos .projeto .photos img:hover .descricao {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #19AE81;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  .webview .portfolios .container .p-projetos .projeto .photos img:hover .descricao p {
+    display: block;
+    color: #FFFFFF;
+  }
+  .webview .contato .container .title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .webview .contato .container .formulario form .form-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .webview .contato .container .formulario form .form-group .controls {
+    padding: 5px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
