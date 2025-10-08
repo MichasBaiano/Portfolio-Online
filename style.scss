@@ -1,4 +1,5 @@
 @use './assets/sass/config';
+@use './assets/sass/utils';
 
 *{
     margin: 0;
@@ -52,8 +53,9 @@ body, html{
                     height: 35px;
                     border-radius: 6px;
                     border: 1px solid config.$color-white;
-                    background-color: transparent;
+                    background-color: config.$color-green;
                     color: config.$color-white;
+                    cursor: pointer;
                 }
             }
         }
@@ -440,6 +442,7 @@ body, html{
                             border-radius: 2px;
                             background-color: config.$color-green;
                             color: config.$color-white;
+                            cursor: pointer;
 
                             &:active{
                                 background-color: config.$color-green;
@@ -475,11 +478,54 @@ body, html{
     }
 }
 
+/* Whatsapp */
+.webview{
+
+    .container-whatsapp{    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        padding: 10px;
+        min-width: 40px;
+        min-height: 40px;
+        z-index: 9999;
+
+        .btn-whatsapp{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-width: 60px;
+            min-height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: config.$color-green;
+
+            i{
+                font-size: 2rem;
+                color: config.$color-white;
+            }
+
+            &:hover{
+                background-color: #1E8865;
+                border: 2px solid config.$color-white;
+            }
+        }
+    }
+}
+
 
 /* Responsividade */
 
+
 /* 425px */
 @media only screen and (min-width: config.$media-mobile-l) {
+ 
     .webview {
     
         .intro{
@@ -633,6 +679,239 @@ body, html{
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+
+/* 1024px */
+
+@media only screen and (min-width: config.$media-desktop) {
+    
+    .webview{
+
+        .intro{
+
+            .container{
+
+                h1{
+                    font-size: 3rem;
+                }
+
+                p{
+                    font-size: 1.6rem;
+                }
+
+                .m-auto-btn{
+                    margin-top: 10px;
+
+                    .btn-portfolio{
+                        @include config.font-paragraf;
+                        width: 180px;
+                        height: 40px;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: config.$color-green;
+                            border-radius: 6px;
+                            border: 1px solid config.$color-green;
+                        }
+                    }
+                }
+        
+            }
+        }
+    }
+
+    .webview{
+        
+        .sobre{
+
+            .container{
+                width: 90%;
+                margin: auto;
+
+                .title{
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+
+                .row{
+                    display: grid;
+                    grid-template-columns: 40% 60%;
+                    margin-bottom: 40px;
+
+                    .c-photo{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        padding: 10px;
+
+                        img{
+                            width: 100%;
+                            max-width: 400px;
+                        }
+                    }
+
+                    .c-descricao{
+                        padding: 10px;
+                        margin-top: 0px;
+
+                        p{
+                            font-size: 1.2rem;
+                            margin-bottom: 25px;
+                        }
+
+                        .habilidades{
+
+                            .h-item{
+
+                                .h-title{
+                                    width: 100%;
+
+                                    h3{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+
+                                .h-c-porcentagem{
+
+                                    .h-porcentagem-geral{
+
+                                        span{
+                                            font-size: 1.2rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .webview{
+
+        .servicos{
+
+            .container{
+                width: 100%;
+                margin: auto;
+
+                .s-title{
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+
+                .s-carousel{
+                    width: 96%;
+                    margin: auto;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    .webview{
+
+        .portfolios{
+            min-height: auto;
+
+            .container{
+                width: 90%;
+                margin: auto;
+
+                .p-title{
+
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+                
+                .p-projetos{
+                    padding: 10px;
+
+                    .projeto{
+                        grid-template-rows: 1fr;
+                        grid-template-columns: repeat(3, auto);
+                        grid-auto-rows: 1fr;
+                        row-gap: 10px;
+                        column-gap: 10px;
+
+                        .photos{
+                            height: 100%;
+
+                            .img{
+                                position: relative;
+
+                                &:hover{
+                                    .descricao{
+                                        position: absolute;
+                                        display: flex;
+                                        width: 100%;
+                                        height: 50px;
+                                        background-color: config.$color-green;
+                                        bottom: 0;
+                                        left: 0;
+                                        z-index: 9999;
+
+                                        p{
+                                            display: block;
+                                            color: config.$color-white;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .webview{
+
+        .contato{
+            margin-bottom: 50px;
+
+            .container{
+                width: 90%;
+                margin: auto;
+
+                .title{
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+
+                    h2{
+                        font-size: 2rem;
+                    }
+
+                .formulario{
+
+                    form{
+
+                        .form-group{
+                            display: flex;
+                            flex-direction: row;
+                            margin-top: 10px;
+
+                            .controls{
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
                 }
             }
         }

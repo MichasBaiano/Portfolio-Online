@@ -1,0 +1,21 @@
+@use './config';
+
+// Classe Porcentagem
+
+@for $i from 1 through 10 {
+  .c-#{$i * 10} {
+    width: #{$i * 10%};
+    border-radius: 6px;
+    background-color: config.$color-green;
+  }
+}
+
+
+//Classe Flex Center
+
+.m-auto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
